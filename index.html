@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpeedz|Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <p class="email">adonato8@gmail.com</p>
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="3d">3D</a></li>
+                    <li><a href="#" data-section="2d">2D</a></li>
+                    <li><a href="#" data-section="animation">Animation</a></li>
+                    <li><a href="#" data-section="about">About</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://x.com/CheseChilly" target="_blank" class="social-icon">
+                    <img src="img/icons/x.png"
+                    width="20px" height="20px">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100081566587498" target="_blank" class="social-icon">
+                    <img src="img/icons/facebook.png"
+                    width="20px" height="20px">
+                </a>
+                <a href="https://www.instagram.com/p4rkspeedz_/" target="_blank" class="social-icon">
+                    <img src="img/icons/instagram.png"
+                    width="20px" height="20px">
+                </a>
+                <a href="https://www.tiktok.com/@parkspeedz" target="_blank" class="social-icon">
+                    <img src="img/icons/tiktok.png"
+                    width="20px" height="20px">
+                </a>
+            </div>
+            <p class="hello">Hello!</p>
+        </aside>
+        <main>
+            <section id="3d" class="content-section">
+                <h2>3D Works</h2>
+                <div class="gallery">
+                    <img src="img/MyWork/3D/Aom.png" alt="3D Work 1">
+                    <img src="img/MyWork/3D/ParkPro.png" alt="3D Work 2">
+                </div>
+            </section>
+            <section id="2d" class="content-section">
+                <h2>2D Works</h2>
+                <div class="gallery">
+                    <img src="images/sample3.jpg" alt="2D Work 1">
+                    <img src="images/sample4.jpg" alt="2D Work 2">
+                </div>
+            </section>
+            <section id="animation" class="content-section">
+                <h2>Animations</h2>
+                <div class="video-gallery">
+                    <iframe src="https://www.youtube.com/embed/2GW1JKXIomA" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/samplevideo2" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="about" class="content-section about-section">
+                <h2>About</h2>
+                <img src="img/myphoto.png" alt="My Photo" class="profile-photo">
+                <p>Hi, I'm Rachapon Thatprasert I'm an artist specializing in 2D and 3D artwork, animation, and more. Welcome to my portfolio!</p>
+            </section>
+        </main>
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+        <iframe class="lightbox-content" id="lightbox-video" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <button id="back-to-top" title="Back to top">↑</button>
+    <script src="scripts.js"></script>
+</body>
+</html>

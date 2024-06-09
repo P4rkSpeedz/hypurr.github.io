@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap'); /* เพิ่มฟอนต์จาก Google Fonts */
+
+body {
+    font-family: 'Comic Neue', cursive;  /* ใช้ฟอนต์ Comic Neue */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #EEEEEE;  /* สีพื้นหลังเป็นสีเทาอ่อน */
+    font-size: 16px;  /* เพิ่มขนาดฟอนต์เริ่มต้น */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #D1D8C5;  /* สีพื้นหลังของ sidebar เป็นสีเขียวอ่อน */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    transition: background-color 0.3s ease;  /* เพิ่มการเปลี่ยนสีพื้นหลังที่สมูท */
+}
+
+.sidebar:hover {
+    background-color: #c0c8b5;  /* สีพื้นหลังเมื่อ hover */
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.email {
+    margin-bottom: 20px;
+    text-align: left;
+    color: #615EFC;  /* สีฟ้าเข้ม */
+    font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 20px 0;  /* ปรับระยะห่างของหมวดหมู่ */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #615EFC;  /* สีฟ้าเข้ม */
+    font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
+    transition: color 0.3s ease;  /* เพิ่มการเปลี่ยนสีข้อความที่สมูท */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #7E8EF1;  /* เปลี่ยนสีเมื่อ hover */
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #615EFC;  /* สีฟ้าเข้ม */
+    font-size: 20px;
+    padding: 5px;
+    transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
+}
+
+.social a:hover {
+    transform: scale(1.2);  /* ขยายขนาดเมื่อ hover */
+}
+
+.hello {
+    margin-top: 20px;
+    text-align: left;
+    color: #615EFC;  /* สีฟ้าเข้ม */
+    font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 270px; /* เพิ่มระยะห่างจาก sidebar */
+    overflow-y: auto;
+    background-color: #EEEEEE;  /* สีพื้นหลังของ main เป็นสีเทาอ่อน */
+}
+
+section {
+    margin-bottom: 40px;
+    display: none;  /* ซ่อน section เริ่มต้น */
+    opacity: 0;
+    transition: opacity 0.5s ease;  /* เพิ่มการเปลี่ยนความโปร่งแสงที่สมูท */
+}
+
+section.active {
+    display: block;  /* แสดง section ที่ active */
+    opacity: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.gallery img {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: cover; /* ป้องกันภาพยืด */
+    border: 1px solid #7E8EF1;  /* สีฟ้ากลาง */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวและเงาที่สมูท */
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);  /* ขยายขนาดเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* เพิ่มเงาเมื่อ hover */
+}
+
+.video-gallery iframe {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
+    cursor: pointer;
+}
+
+.video-gallery iframe:hover {
+    transform: scale(1.05);  /* ขยายขนาดเมื่อ hover */
+}
+
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
+}
+
+.about-section {
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);  /* ขยายขนาดเมื่อ hover */
+}
+
+#back-to-top {
+    display: none; /* ปุ่มจะไม่แสดงจนกว่าจะเลื่อนหน้าจอ */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #615EFC;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
+}
+
+#back-to-top:hover {
+    background-color: #555;
+    transform: scale(1.1);  /* ขยายขนาดเมื่อ hover */
+}
+
+.lightbox {
+    display: none; /* ซ่อน Lightbox เริ่มต้น */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* สีพื้นหลังเป็นสีดำโปร่งแสง */
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 700px;
+}
+
+#lightbox-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh; /* ให้ภาพขยายได้เต็มที่แต่ไม่เกินขนาดหน้าจอ */
+}
+
+#lightbox-video {
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh; /* ให้วิดีโอขยายได้เต็มที่แต่ไม่เกินขนาดหน้าจอ */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
