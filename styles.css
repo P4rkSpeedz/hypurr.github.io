@@ -5,27 +5,27 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100vh;
+    flex-direction: column; /* ปรับทิศทางการจัดวางให้อยู่ในแนวตั้งสำหรับมือถือ */
+    min-height: 100vh;
     background-color: #EEEEEE;  /* สีพื้นหลังเป็นสีเทาอ่อน */
     font-size: 16px;  /* เพิ่มขนาดฟอนต์เริ่มต้น */
 }
 
 .container {
     display: flex;
-    height: 100%;
+    flex-direction: column; /* ปรับทิศทางการจัดวางให้อยู่ในแนวตั้งสำหรับมือถือ */
     width: 100%;
 }
 
 .sidebar {
-    width: 250px;
+    width: 100%;
     background-color: #D1D8C5;  /* สีพื้นหลังของ sidebar เป็นสีเขียวอ่อน */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: fixed;
-    height: 100%;
-    overflow-y: auto;
+    position: relative;
+    height: auto;
     transition: background-color 0.3s ease;  /* เพิ่มการเปลี่ยนสีพื้นหลังที่สมูท */
 }
 
@@ -78,13 +78,16 @@ nav ul li a:hover {
 .social a {
     text-decoration: none;
     color: #615EFC;  /* สีฟ้าเข้ม */
-    font-size: 20px;
-    padding: 5px;
     transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
 }
 
 .social a:hover {
     transform: scale(1.2);  /* ขยายขนาดเมื่อ hover */
+}
+
+.social-icon img {
+    width: 24px;  /* ปรับขนาดไอคอน */
+    height: 24px;
 }
 
 .hello {
@@ -97,7 +100,7 @@ nav ul li a:hover {
 main {
     padding: 20px;
     flex-grow: 1;
-    margin-left: 270px; /* เพิ่มระยะห่างจาก sidebar */
+    margin-top: 20px;
     overflow-y: auto;
     background-color: #EEEEEE;  /* สีพื้นหลังของ main เป็นสีเทาอ่อน */
 }
@@ -136,7 +139,8 @@ section.active {
 }
 
 .video-gallery iframe {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 200px;
     margin: 10px;
     transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
@@ -235,4 +239,21 @@ section.active {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        height: 100%;
+    }
+    
+    main {
+        margin-left: 270px;
+    }
 }
