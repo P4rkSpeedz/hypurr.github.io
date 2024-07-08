@@ -19,7 +19,7 @@ body {
 
 .sidebar {
     width: 100%;
-    background-color: #D1D8C5;  /* สีพื้นหลังของ sidebar เป็นสีเขียวอ่อน */
+    background-color: #D1D8C5;  /* สีพื้นหลังของ sidebar เป็นสีเทาอ่อน */
     padding: 20px;
     display: flex;
     flex-direction: column;
