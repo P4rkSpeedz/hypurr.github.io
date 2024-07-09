@@ -7,8 +7,9 @@ body {
     display: flex;
     flex-direction: column; /* ปรับทิศทางการจัดวางให้อยู่ในแนวตั้งสำหรับมือถือ */
     min-height: 100vh;
-    background-color: #EEEEEE;  /* สีพื้นหลังเป็นสีเทาอ่อน */
+    background-color: #121212;  /* สีพื้นหลังเป็นสีดำ */
     font-size: 16px;  /* เพิ่มขนาดฟอนต์เริ่มต้น */
+    color: #FFFFFF; /* สีข้อความเป็นสีขาว */
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 
 .sidebar {
     width: 100%;
-    background-color: #e6e6e6;  /* สีพื้นหลังของ sidebar เป็นสีเทาอ่อน */
+    background-color: #1a1a1a;  /* สีพื้นหลังของ sidebar เป็นสีดำ */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@ body {
 }
 
 .sidebar:hover {
-    background-color: #ffffff;  /* สีพื้นหลังเมื่อ hover */
+    background-color: #2c2c2c;  /* สีพื้นหลังเมื่อ hover */
 }
 
 .logo {
@@ -41,7 +42,7 @@ body {
 .email {
     margin-bottom: 20px;
     text-align: left;
-    color: #615EFC;  /* สีฟ้าเข้ม */
+    color: #7DF9FF;  /* สีฟ้า neon */
     font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
 }
 
@@ -57,14 +58,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #615EFC;  /* สีฟ้าเข้ม */
+    color: #F0A3FF;  /* สีชมพู neon */
     font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
     transition: color 0.3s ease;  /* เพิ่มการเปลี่ยนสีข้อความที่สมูท */
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #7E8EF1;  /* เปลี่ยนสีเมื่อ hover */
+    color: #B0E0E6;  /* สีฟ้า */
 }
 
 .social {
@@ -77,7 +78,7 @@ nav ul li a:hover {
 
 .social a {
     text-decoration: none;
-    color: #615EFC;  /* สีฟ้าเข้ม */
+    color: #32CD32;  /* สีเขียว neon */
     transition: transform 0.3s ease;  /* เพิ่มการเปลี่ยนแปลงการเคลื่อนไหวที่สมูท */
 }
 
@@ -93,7 +94,7 @@ nav ul li a:hover {
 .hello {
     margin-top: 20px;
     text-align: left;
-    color: #615EFC;  /* สีฟ้าเข้ม */
+    color: #00FFFF;  /* สีฟ้า neon */
     font-size: 1.2em;  /* เพิ่มขนาดฟอนต์ */
 }
 
@@ -102,7 +103,7 @@ main {
     flex-grow: 1;
     margin-top: 20px;
     overflow-y: auto;
-    background-color: #EEEEEE;  /* สีพื้นหลังของ main เป็นสีเทาอ่อน */
+    background-color: #121212;  /* สีพื้นหลังของ main เป็นสีดำ */
 }
 
 section {
@@ -179,7 +180,7 @@ section.active {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #615EFC;
+    background-color: #FF69B4; /* สีชมพู neon */
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -188,7 +189,7 @@ section.active {
 }
 
 #back-to-top:hover {
-    background-color: #555;
+    background-color: #FF1493;  /* สีชมพูเข้ม */
     transform: scale(1.1);  /* ขยายขนาดเมื่อ hover */
 }
 
